@@ -6,7 +6,9 @@ public class cashierTest extends TestCase {
 
     public void testProduct() {
         products prod =  new cashier();
-        assertEquals("you paid $53 and here is the yam",prod.product("yam" , 53));
+        assertEquals("egg",prod.name);
+        assertEquals("₦23.00",prod.price);
+
     }
 
     public void testResume() {
