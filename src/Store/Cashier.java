@@ -14,16 +14,21 @@ public class Cashier extends Staff{
         System.out.println("what will you like to buy?");
         Customer customer = new Customer();
 
-        String name = customer.name;
-        System.out.println("one "+name+" will cost $"+prod.priceGetter(name));
-        System.out.println("how many  "+name +" will you like to buy?");
-        int amount = customer.number();
-        System.out.println("here is receipt");
-        System.out.println("name-of-product: "+name);
-        System.out.println("Total goods purchase: "+amount);
-        System.out.println("unit price: "+ prod.priceGetter(name));
-        System.out.println("total price: "+amount* prod.priceGetter(name));
-        System.out.println("thanks for you patronage");
+       try {
+           String name = customer.name;
+           System.out.println("one " + name + " will cost $" + prod.priceGetter(name));
+           System.out.println("how many  " + name + " will you like to buy?");
+           int amount = customer.number();
+           System.out.println("here is receipt");
+           System.out.println("name-of-product: $" + name);
+           System.out.println("Total goods purchase: " + amount);
+           System.out.println("unit price: $" + prod.priceGetter(name));
+           System.out.println("total price: $" + amount * prod.priceGetter(name));
+           System.out.println("thanks for you patronage");
+       }catch(Exception e){
+           System.out.println("sorry we do not sell such product!");
+
+       }
     }
 
 
